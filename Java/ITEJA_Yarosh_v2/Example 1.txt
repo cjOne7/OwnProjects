@@ -1,0 +1,14 @@
+program myProgram;
+
+var a, i : double;
+    name : string;
+begin
+    //name := "Nikita" + write("Hello, ", 10, "!");//error due to write can be called only as statement
+    //writeln(round(cos(PI)));
+    //cos(PI);
+    {readln(a);
+    for i := 1 to a do
+    begin
+        writeln(i * "*")
+    end}
+end.
