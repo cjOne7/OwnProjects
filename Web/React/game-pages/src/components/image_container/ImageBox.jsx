@@ -3,7 +3,7 @@ import './image.css';
 
 const ImageBox = ({image}) => {
     return (
-        <div className={'img-box'}
+        <div className={'image-box'}
              style={{backgroundImage: `url(${image.imageLocation})`}}>
         </div>
     );

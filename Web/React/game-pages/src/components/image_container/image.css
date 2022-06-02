@@ -13,7 +13,7 @@
   height: 500px;
 }
 
-.img-box {
+.image-box {
   border: 1px solid black;
   flex-grow: 1;
   background-size: 750px 500px;

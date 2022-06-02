@@ -15,10 +15,9 @@ $border : 1px solid black;
   height  : 500px;
 }
 
-.img-box {
+.image-box {
   border              : $border;
   flex-grow           : 1;
-  //background-image    : url("../../../public/assets/bladeAndSoul.jpg");
   background-size     : 750px 500px;
   background-position : center;
   background-repeat   : no-repeat;

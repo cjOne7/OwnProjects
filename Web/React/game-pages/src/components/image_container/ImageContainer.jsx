@@ -1,34 +1,16 @@
 import React from 'react';
 import './image.css';
 import ImageBox from "./ImageBox";
-
-const images = [
-    {
-        title: 'tera',
-        imageLocation: '../../assets/tera.jpg'
-    },
-    {
-        title: 'revelation',
-        imageLocation: '../../assets/revelation.jpg'
-    },
-    {
-        title: 'blade and soul',
-        imageLocation: '../../assets/bladeAndSoul.jpg'
-    }
-]
-
-// const styles = {
-//     imageBox: {
-//         backgroundImage: `url(../../assets/bladeAndSoul.jpg)`
-//     }
-// }
+import {imageGenres} from "./image";
 
 const ImageContainer = () => {
     return (
         <div className={'image-container'}>
             <div className={'image-box-wrapper'}>
                 {
-                    images.map(image => <ImageBox image={image}></ImageBox>)
+                    imageGenres[0].mmorpg.map((image, i) =>
+                        <ImageBox image={image} key={i}/>
+                    )
                 }
             </div>
         </div>
