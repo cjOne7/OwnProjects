@@ -1,0 +1,25 @@
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  border: 1px solid black;
+}
+
+.image-box-wrapper {
+  border: 1px solid black;
+  display: flex;
+  width: 1200px;
+  height: 500px;
+}
+
+.img-box {
+  border: 1px solid black;
+  flex-grow: 1;
+  background-image: url("../../../public/assets/tera.jpg");
+  background-size: 750px 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*# sourceMappingURL=image.css.map */

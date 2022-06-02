@@ -1,0 +1,25 @@
+$border : 1px solid black;
+
+.image-container {
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  height          : 80vh;
+  border          : $border;
+}
+
+.image-box-wrapper {
+  border  : $border;
+  display : flex;
+  width   : 1200px;
+  height  : 500px;
+}
+
+.img-box {
+  border              : $border;
+  flex-grow           : 1;
+  background-image    : url("../../../public/assets/tera.jpg");
+  background-size     : 750px 500px;
+  background-position : center;
+  background-repeat   : no-repeat;
+}
