@@ -1,9 +1,10 @@
 import React from 'react';
+import './image.css';
 
-const ImageBox = () => {
+const ImageBox = ({image}) => {
     return (
-        <div>
-
+        <div className={'img-box'}
+             style={{backgroundImage: `url(${image.imageLocation})`}}>
         </div>
     );
 };

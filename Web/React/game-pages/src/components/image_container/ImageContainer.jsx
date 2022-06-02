@@ -1,32 +1,35 @@
 import React from 'react';
 import './image.css';
+import ImageBox from "./ImageBox";
 
-const images = [{
-    title: 'tera',
-    imagePath: '../../assets/tera.jpg'
-}]
-
-const styles = {
-    imageBox: {
-        backgroundImage: `url(../../assets/bladeAndSoul.jpg)`
+const images = [
+    {
+        title: 'tera',
+        imageLocation: '../../assets/tera.jpg'
+    },
+    {
+        title: 'revelation',
+        imageLocation: '../../assets/revelation.jpg'
+    },
+    {
+        title: 'blade and soul',
+        imageLocation: '../../assets/bladeAndSoul.jpg'
     }
-}
+]
+
+// const styles = {
+//     imageBox: {
+//         backgroundImage: `url(../../assets/bladeAndSoul.jpg)`
+//     }
+// }
 
 const ImageContainer = () => {
     return (
         <div className={'image-container'}>
             <div className={'image-box-wrapper'}>
-                <div className={'img-box'}
-                     style={{backgroundImage: `url(${images[0].imagePath})`}}
-                >
-                </div>
-                <div className={'img-box'}
-                     style={{backgroundImage: `url(${window.location.origin}/assets/revelation.jpg)`}}>
-                </div>
-                <div className={'img-box'}
-                     style={styles.imageBox}
-                >
-                </div>
+                {
+                    images.map(image => <ImageBox image={image}></ImageBox>)
+                }
             </div>
         </div>
     );
