@@ -16,7 +16,6 @@
 .img-box {
   border: 1px solid black;
   flex-grow: 1;
-  background-image: url("../../../public/assets/tera.jpg");
   background-size: 750px 500px;
   background-position: center;
   background-repeat: no-repeat;

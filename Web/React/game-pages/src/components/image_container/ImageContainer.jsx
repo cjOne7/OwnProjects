@@ -8,7 +8,7 @@ import './image.css';
 
 const styles = {
     imageBox: {
-        backgroundImage: `url(https://i.imgur.com/u1UDFdy.jpeg)`
+        backgroundImage: `url()`
     }
 }
 
@@ -18,12 +18,13 @@ const ImageContainer = () => {
             <div className={'image-box-wrapper'}>
                 <div className={'img-box'}
                      style={{backgroundImage: `url(${window.location.origin}/assets/tera.jpg)`}}>
-
                 </div>
-                {/*<div className={'img-box'}>*/}
-                {/*</div>*/}
-                {/*<div className={'img-box'}>*/}
-                {/*</div>*/}
+                <div className={'img-box'}
+                     style={{backgroundImage: `url(${window.location.origin}/assets/tera.jpg)`}}>>
+                </div>
+                <div className={'img-box'}
+                     style={{backgroundImage: `url(${window.location.origin}/assets/tera.jpg)`}}>>
+                </div>
             </div>
         </div>
     );
