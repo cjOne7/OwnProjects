@@ -1,24 +1,84 @@
-$border : 1px solid black;
+@import "../../styles/mixins";
+
+@mixin onMouseHoverEffects($bgSizes, $flewGrow, $opacity, $filter) {
+  background-size : $bgSizes;
+  flex-grow       : $flewGrow;
+  opacity         : $opacity;
+  filter          : $filter;
+}
 
 .image-container {
   display         : flex;
   justify-content : center;
   align-items     : center;
   height          : 80vh;
-  border          : $border;
+  @include border(1px, solid, black);
+
+  .image-box-wrapper {
+	@include border(1px, solid, black);
+	display : flex;
+	width   : 80%;
+	height  : 85%;
+  }
 }
 
-.image-box-wrapper {
-  border  : $border;
-  display : flex;
-  width   : 1200px;
-  height  : 500px;
+$transitionTime : 1.5s;
+
+@mixin transitionForBorders($transform, $transformDirection) {
+  transition       : $transitionTime;
+  transition-delay : .3s;
+  opacity          : 1;
+  #{$transform}    : $transformDirection;
 }
 
 .image-box {
-  border              : $border;
-  flex-grow           : 1;
-  background-size     : 750px 500px;
   background-position : center;
   background-repeat   : no-repeat;
+  @include onMouseHoverEffects(50rem 40rem, 1, .7, grayscale(1));
+  transition          : $transitionTime ease-in-out;
+  position            : relative;
+  overflow            : hidden;
+
+  &:hover {
+	@include onMouseHoverEffects(70rem 45rem, 5, 1, grayscale(0));
+
+	.border-top-bottom::before {
+	  @include transitionForBorders(transform, translateX(100%));
+	}
+
+	.border-top-bottom::after {
+	  @include transitionForBorders(transform, translateX(-100%));
+	}
+
+	.border-left-right::before {
+	  @include transitionForBorders(transform, translateY(100%));
+	}
+
+	.border-left-right::after {
+	  @include transitionForBorders(transform, translateY(-100%));
+	}
+
+	.image-content {
+	  transition-delay : $transitionTime;
+	  transform        : translateY(-10%);
+	  opacity          : .7;
+	}
+  }
+}
+
+.image-content {
+  position         : absolute;
+  bottom           : 0;
+  right            : 0;
+  background-color : black;
+  opacity          : .3;
+  color            : white;
+  padding          : 10px;
+  width            : 70%;
+  transform        : translateY(100%);
+  transition       : $transitionTime;
+
+  h2 {
+	text-transform : uppercase;
+  }
 }

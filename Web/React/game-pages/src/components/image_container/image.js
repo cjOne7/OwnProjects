@@ -2,7 +2,7 @@ export const imageGenres = [
     {
         'mmorpg': [
             {
-                title: 'tera',
+                title: 'tera: the next',
                 imageLocation: require('../../assets/tera.jpg')
             },
             {

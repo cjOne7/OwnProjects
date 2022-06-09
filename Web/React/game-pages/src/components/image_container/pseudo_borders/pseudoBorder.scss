@@ -1,0 +1,43 @@
+@import "../../../styles/mixins";
+
+$content : "";
+$indent  : 10px;
+
+@mixin absolute-position($positionVertical, $positionHorizontal, $posVertical, $posHorizontal) {
+  #{$positionVertical}      : $posVertical;
+  #{$positionHorizontal}    : $posHorizontal;
+}
+
+@mixin pseudoBordersProps($sizeProp) {
+  color           : white;
+  opacity         : .3;
+  transition      : 1.5s;
+  content         : $content;
+  @include border(1px, solid, white);
+  #{$sizeProp}    : 100%;
+  position        : absolute;
+}
+
+.border-top-bottom {
+  &::before {
+	@include pseudoBordersProps(width);
+	@include absolute-position(top, left, $indent, 0);
+  }
+
+  &::after {
+	@include pseudoBordersProps(width);
+	@include absolute-position(bottom, right, $indent, 0);
+  }
+}
+
+.border-left-right {
+  &::before {
+	@include pseudoBordersProps(height);
+	@include absolute-position(top, left, 0, $indent);
+  }
+
+  &::after {
+	@include pseudoBordersProps(height);
+	@include absolute-position(bottom, right, 0, $indent);
+  }
+}

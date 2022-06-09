@@ -1,0 +1,55 @@
+.border-top-bottom::before {
+  color: white;
+  opacity: 0.3;
+  transition: 1.5s;
+  content: "";
+  border-width: 1px;
+  border-style: solid;
+  border-color: white;
+  width: 100%;
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+.border-top-bottom::after {
+  color: white;
+  opacity: 0.3;
+  transition: 1.5s;
+  content: "";
+  border-width: 1px;
+  border-style: solid;
+  border-color: white;
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+}
+
+.border-left-right::before {
+  color: white;
+  opacity: 0.3;
+  transition: 1.5s;
+  content: "";
+  border-width: 1px;
+  border-style: solid;
+  border-color: white;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+.border-left-right::after {
+  color: white;
+  opacity: 0.3;
+  transition: 1.5s;
+  content: "";
+  border-width: 1px;
+  border-style: solid;
+  border-color: white;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+}
+
+/*# sourceMappingURL=pseudoBorder.css.map */
