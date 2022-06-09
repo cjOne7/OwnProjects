@@ -1,5 +1,6 @@
 $bgNavBarColor       : rgba(52, 58, 64, 1);
 $navbarItemTextColor : darkgray;
+$indent              : .5rem;
 
 @mixin clearLinkTag() {
   text-decoration : none;
@@ -8,7 +9,7 @@ $navbarItemTextColor : darkgray;
 
 .navbar-container {
   background-color : $bgNavBarColor;
-  padding          : .5rem 0;
+  padding          : $indent 0;
   position         : relative;
 
   .navbar-list-items {
@@ -26,8 +27,9 @@ $navbarItemTextColor : darkgray;
 
 	.navbar-header {
 	  @include clearLinkTag;
-	  font-size    : 1.7em;
-	  margin-right : .5rem;
+	  font-size    : $indent * 3.4;
+	  margin-right : $indent;
+	  color        : white;
 	}
 
 	.list-element {
@@ -35,8 +37,8 @@ $navbarItemTextColor : darkgray;
 
 	  .navbar-link {
 		@include clearLinkTag;
-		padding    : .5rem;
-		font-size  : 1.2rem;
+		padding    : $indent;
+		font-size  : $indent * 2.4;
 		transition : color .3s;
 
 		&:hover {
@@ -45,57 +47,4 @@ $navbarItemTextColor : darkgray;
 	  }
 	}
   }
-
 }
-
-
-//.navbar-container {
-//  background-color : rgba(52, 58, 64, 1);
-//  display          : flex;
-//  position         : relative;
-//  width            : 100%;
-//  //padding          : .7rem;
-//  padding          : .7rem 0;
-//
-//  div {
-//	//margin : auto;
-//	//width  : 80%;
-//  }
-//
-//  ul {
-//	display        : flex;
-//	flex-direction : row;
-//	list-style     : none;
-//	padding        : 0;
-//
-//	div {
-//	  display         : flex;
-//	  justify-content : center;
-//	  align-items     : center;
-//	}
-//
-//	.navbar-header {
-//	  text-decoration : none;
-//	  color           : rgba(255, 255, 255, 1);
-//	  font-size       : 1.5rem;
-//	  //margin          : 0 1rem;
-//	}
-//  }
-//
-//  .list-element {
-//	font-size : 1.2rem;
-//	position  : relative;
-//  }
-//}
-//
-//.navbar-link {
-//  text-decoration : none;
-//  color           : rgba(255, 255, 255, .55);
-//  cursor          : pointer;
-//  padding         : .5rem;
-//  transition      : color .3s;
-//
-//  &:hover {
-//	color : rgba(255, 255, 255, .75);
-//  }
-//}
