@@ -1,3 +1,38 @@
-
+.navbar-container {
+  background-color: #343a40;
+  padding: 0.5rem 0;
+  position: relative;
+}
+.navbar-container .navbar-list-items {
+  display: flex;
+  padding: 0;
+  text-decoration: none;
+  width: 80%;
+  margin: auto;
+}
+.navbar-container .navbar-list-items div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar-container .navbar-list-items .navbar-header {
+  text-decoration: none;
+  color: darkgray;
+  font-size: 1.7em;
+  margin-right: 0.5rem;
+}
+.navbar-container .navbar-list-items .list-element {
+  list-style: none;
+}
+.navbar-container .navbar-list-items .list-element .navbar-link {
+  text-decoration: none;
+  color: darkgray;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+.navbar-container .navbar-list-items .list-element .navbar-link:hover {
+  color: #c3c3c3;
+}
 
 /*# sourceMappingURL=navbar.css.map */

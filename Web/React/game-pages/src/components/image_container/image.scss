@@ -66,19 +66,26 @@ $transitionTime : 1.5s;
   }
 }
 
+$indent         : 10px;
+
 .image-content {
   position         : absolute;
   bottom           : 0;
-  right            : 0;
+  right            : $indent;
   background-color : black;
   opacity          : .3;
   color            : white;
-  padding          : 10px;
+  padding          : $indent $indent * 1.5;
+  text-align       : justify;
   width            : 70%;
   transform        : translateY(100%);
   transition       : $transitionTime;
 
   h2 {
 	text-transform : uppercase;
+  }
+
+  p {
+	text-indent : $indent * 2;
   }
 }
