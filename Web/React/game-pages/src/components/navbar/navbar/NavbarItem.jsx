@@ -7,6 +7,7 @@ const navbarLinkElement = 'list-element';
 const NavbarItem = ({path, linkText}) => {
     return (
         <div>
+            {/*TODO add active navlink style */}
             <li className={navbarLinkElement}>
                 <NavLink to={path} className={navbarLinkClass}>{linkText}</NavLink>
             </li>
