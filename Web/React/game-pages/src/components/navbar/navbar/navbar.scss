@@ -59,6 +59,7 @@ $burgerIconSize      : 1.5rem;
 .icon {
   display    : none;
   position   : absolute;
+  cursor     : pointer;
   top        : 0;
   right      : 0;
   transition : background-color .3s;

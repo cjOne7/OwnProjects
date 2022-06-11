@@ -48,10 +48,6 @@ const NavigationResponsiveBar1 = () => {
                     </li>
                 </ul>
             </nav>
-
-            <Outlet/>
-
-            <footer>Footer</footer>
         </div>
     );
 };

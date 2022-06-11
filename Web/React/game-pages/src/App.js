@@ -8,12 +8,13 @@ import ContactForm from "./components/contact_form/ContactForm";
 import Login from "./components/login/Login";
 import HomePage from "./components/home/HomePage";
 import ResponsiveNavbar from "./components/navbar/navbar/ResponsiveNavbar";
+import MainPage from "./components/main/MainPage";
 
 const App = () => {
     return (
         <>
             <Routes>
-                <Route path={routes.home} element={<ResponsiveNavbar/>}>
+                <Route path={routes.home} element={<MainPage/>}>
                     <Route index element={<HomePage/>}/>
                     <Route path={routes.mmorpg} element={<MMORPG/>}/>
                     <Route path={routes.shooters} element={<Shooters/>}/>
