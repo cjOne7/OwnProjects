@@ -1,11 +1,10 @@
 import React from 'react';
 
-const NavbarMenuIcon = () => {
-    const navbarId = 'navbar';
+const NavbarMenuIcon = ({navbarBodyId}) => {
     const mainClassName = 'navbar-list-items';
     const showResponsiveNavItems = (e) => {
         e.preventDefault();
-        const navbar = document.getElementById(navbarId);
+        const navbar = document.getElementById(navbarBodyId);
         navbar.className = navbar.className === mainClassName ? `${mainClassName} responsive` : mainClassName;
     };
     return (
