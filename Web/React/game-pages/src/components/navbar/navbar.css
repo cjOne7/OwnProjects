@@ -1,6 +1,5 @@
 .navbar-container {
   background-color: #343a40;
-  padding: 0.5rem 0;
   position: relative;
 }
 .navbar-container .navbar-list-items {
@@ -9,6 +8,8 @@
   text-decoration: none;
   width: 80%;
   margin: auto;
+  position: relative;
+  min-height: 3.5rem;
 }
 .navbar-container .navbar-list-items div {
   display: flex;
@@ -19,21 +20,91 @@
   text-decoration: none;
   color: darkgray;
   font-size: 1.7rem;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
   color: white;
 }
 .navbar-container .navbar-list-items .list-element {
   list-style: none;
+  position: relative;
+  margin-right: 0.5rem;
+}
+.navbar-container .navbar-list-items .list-element::after {
+  content: "";
+  color: darkgray;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 20%;
+  border-bottom: 1px solid darkgray;
+  transition: width 0.3s;
+}
+.navbar-container .navbar-list-items .list-element:hover::after {
+  width: 100%;
 }
 .navbar-container .navbar-list-items .list-element .navbar-link {
   text-decoration: none;
   color: darkgray;
-  padding: 0.5rem;
   font-size: 1.2rem;
+  white-space: nowrap;
   transition: color 0.3s;
 }
 .navbar-container .navbar-list-items .list-element .navbar-link:hover {
-  color: #c3c3c3;
+  color: #cfcfcf;
+}
+
+.burger-menu-container {
+  display: none !important;
+  width: 100%;
+  justify-content: right;
+}
+.burger-menu-container .burger-icon-container {
+  height: 3.5rem;
+  width: 3.5rem;
+  transition: background-color 0.3s;
+}
+.burger-menu-container .burger-icon-container:hover {
+  background-color: #4b545c;
+  cursor: pointer;
+}
+.burger-menu-container .burger-icon {
+  text-decoration: none;
+  color: darkgray;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 680px) {
+  .navbar-list-items .list-element {
+    transition: 1s;
+    display: none;
+  }
+
+  .burger-menu-container {
+    display: flex !important;
+    justify-content: right !important;
+    transition: 1s;
+  }
+}
+@media screen and (max-width: 680px) {
+  .navbar-list-items {
+    display: block;
+    transition: 1s;
+  }
+  .navbar-list-items.responsive {
+    display: block;
+    transition: 1s;
+  }
+  .navbar-list-items.responsive div {
+    justify-content: left;
+  }
+  .navbar-list-items.responsive .list-element {
+    display: flex;
+    justify-content: left;
+    transition: 1s;
+  }
+
+  .burger-icon-container {
+    justify-content: center !important;
+  }
 }
 
 /*# sourceMappingURL=navbar.css.map */

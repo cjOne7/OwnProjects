@@ -1,15 +1,16 @@
 $bgNavBarColor       : rgba(52, 58, 64, 1);
 $navbarItemTextColor : darkgray;
 $indent              : .5rem;
+$burgerIconSize      : 3.5rem;
 
-@mixin clearLinkTag() {
+@mixin stylizedNavLink($fontSize) {
   text-decoration : none;
   color           : $navbarItemTextColor;
+  font-size       : $fontSize;
 }
 
 .navbar-container {
   background-color : $bgNavBarColor;
-  padding          : $indent 0;
   position         : relative;
 
   .navbar-list-items {
@@ -18,6 +19,8 @@ $indent              : .5rem;
 	text-decoration : none;
 	width           : 80%;
 	margin          : auto;
+	position        : relative;
+	min-height      : $burgerIconSize;
 
 	div {
 	  display         : flex;
@@ -26,25 +29,102 @@ $indent              : .5rem;
 	}
 
 	.navbar-header {
-	  @include clearLinkTag;
-	  font-size    : $indent * 3.4;
-	  margin-right : $indent;
+	  @include stylizedNavLink($indent * 3.4);
+	  margin-right : $indent * 2;
 	  color        : white;
 	}
 
 	.list-element {
-	  list-style : none;
+	  list-style   : none;
+	  position     : relative;
+	  margin-right : $indent;
+
+	  &::after {
+		content       : "";
+		color         : $navbarItemTextColor;
+		position      : absolute;
+		bottom        : 0;
+		left          : 0;
+		width         : 20%;
+		border-bottom : 1px solid $navbarItemTextColor;
+		transition    : width .3s;
+	  }
+
+	  &:hover::after {
+		width : 100%;
+	  }
 
 	  .navbar-link {
-		@include clearLinkTag;
-		padding    : $indent;
-		font-size  : $indent * 2.4;
-		transition : color .3s;
+		@include stylizedNavLink($indent * 2.4);
+		white-space : nowrap;
+		transition  : color .3s;
 
 		&:hover {
-		  color : lighten(darkgray, 10%);
+		  color : lighten(darkgray, 15%);
 		}
 	  }
 	}
+  }
+}
+
+.burger-menu-container {
+  display         : none !important;
+  width           : 100%;
+  justify-content : right;
+
+  .burger-icon-container {
+	height     : $burgerIconSize;
+	width      : $burgerIconSize;
+	transition : background-color .3s;
+
+	&:hover {
+	  background-color : lighten($bgNavBarColor, 10%);
+	  cursor           : pointer;
+	}
+  }
+
+  .burger-icon {
+	@include stylizedNavLink($indent * 3);
+  }
+}
+
+@media screen and (max-width : 680px) {
+  .navbar-list-items {
+	.list-element {
+	  transition : 1s;
+	  display    : none;
+	}
+  }
+
+  .burger-menu-container {
+	display         : flex !important;
+	justify-content : right !important;
+	transition      : 1s;
+  }
+}
+
+@media screen and (max-width : 680px) {
+  .navbar-list-items {
+	display    : block;
+	transition : 1s;
+
+	&.responsive {
+	  display    : block;
+	  transition : 1s;
+
+	  div {
+		justify-content : left;
+	  }
+
+	  .list-element {
+		display         : flex;
+		justify-content : left;
+		transition      : 1s;
+	  }
+	}
+  }
+
+  .burger-icon-container {
+	justify-content : center !important;
   }
 }
