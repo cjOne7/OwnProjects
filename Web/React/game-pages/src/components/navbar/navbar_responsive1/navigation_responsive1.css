@@ -1,6 +1,6 @@
 .navbar-container {
-  background-color: #343a40;
-  padding: 0.5rem 0;
+  background-color: #343A40;
+  min-height: 3rem;
 }
 .navbar-container .navbar-list-items {
   width: 80%;
@@ -46,6 +46,11 @@
   position: absolute;
   top: 0;
   right: 0;
+  transition: background-color 0.3s;
+  padding: 0.5rem 0.85rem;
+}
+.icon:hover {
+  background-color: #3f474e;
 }
 .icon .navbar-link {
   text-decoration: none;
@@ -54,10 +59,9 @@
 }
 
 .list-header {
-  display: inline;
+  display: inline-block;
   margin-right: 1rem;
-}
-.list-header .navbar-link {
+  padding: 0.5rem 0;
   text-decoration: none;
   color: white;
   font-size: 1.7rem;

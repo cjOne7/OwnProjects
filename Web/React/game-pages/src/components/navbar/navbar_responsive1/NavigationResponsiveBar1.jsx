@@ -16,9 +16,7 @@ const NavigationResponsiveBar1 = () => {
         <div>
             <nav role={"navigation"} className={'navbar-container'}>
                 <ul className={className} id={'navbar'}>
-                    <li className={'list-header'}>
-                        <a href="#home" className={'navbar-link'}>Home</a>
-                    </li>
+                    <a href="#home" className={'list-header'}>Home</a>
                     <div>
                         <li className={'list-element'}>
                             <a href="#mmorpg" className={'navbar-link'}>MMORPG</a>
