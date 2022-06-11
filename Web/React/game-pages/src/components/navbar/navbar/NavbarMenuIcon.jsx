@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const NavbarMenuIcon = ({navbarBodyId}) => {
     const mainClassName = 'navbar-list-items';
@@ -13,5 +14,9 @@ const NavbarMenuIcon = ({navbarBodyId}) => {
         </li>
     );
 };
+
+NavbarMenuIcon.propTypes = {
+    navbarBodyId: PropTypes.number.isRequired
+}
 
 export default NavbarMenuIcon;

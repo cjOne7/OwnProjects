@@ -1,10 +1,10 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
-
-const navbarLinkClass = 'navbar-link';
-const navbarLinkElement = 'list-element';
+import PropTypes from 'prop-types';
 
 const NavbarItem = ({path, linkText}) => {
+    const navbarLinkClass = 'navbar-link';
+    const navbarLinkElement = 'list-element';
     return (
         <div>
             {/*TODO add active navlink style */}
@@ -15,4 +15,8 @@ const NavbarItem = ({path, linkText}) => {
     );
 };
 
+NavbarItem.propTypes = {
+    path: PropTypes.string.isRequired,
+    linkText: PropTypes.string.isRequired
+}
 export default NavbarItem;
