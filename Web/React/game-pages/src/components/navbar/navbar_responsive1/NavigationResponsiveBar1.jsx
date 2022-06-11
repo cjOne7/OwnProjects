@@ -19,18 +19,26 @@ const NavigationResponsiveBar1 = () => {
                     <li className={'list-header'}>
                         <a href="#home" className={'navbar-link'}>Home</a>
                     </li>
-                    <li className={'list-element'}>
-                        <a href="#mmorpg" className={'navbar-link'}>MMORPG</a>
-                    </li>
-                    <li className={'list-element'}>
-                        <a href="#shooters" className={'navbar-link'}>Shooters</a>
-                    </li>
-                    <li className={'list-element'}>
-                        <a href="#hack&slash" className={'navbar-link'}>Hach&Slash</a>
-                    </li>
-                    <li className={'list-element'}>
-                        <a href="#contact" className={'navbar-link'}>Contact us</a>
-                    </li>
+                    <div>
+                        <li className={'list-element'}>
+                            <a href="#mmorpg" className={'navbar-link'}>MMORPG</a>
+                        </li>
+                    </div>
+                    <div>
+                        <li className={'list-element'}>
+                            <a href="#shooters" className={'navbar-link'}>Shooters</a>
+                        </li>
+                    </div>
+                    <div>
+                        <li className={'list-element'}>
+                            <a href="#hack&slash" className={'navbar-link'}>Hach&Slash</a>
+                        </li>
+                    </div>
+                    <div>
+                        <li className={'list-element'}>
+                            <a href="#contact" className={'navbar-link'}>Contact us</a>
+                        </li>
+                    </div>
                     <li className={'icon'}>
                         <a href="javascript:void(0)" className={'navbar-link'}
                            onClick={() => showResponsiveNavItems()}>&#9776;</a>

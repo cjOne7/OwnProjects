@@ -9,6 +9,9 @@
   list-style: none;
   padding: 0;
 }
+.navbar-container .navbar-list-items div {
+  display: inline;
+}
 
 .list-element {
   display: inline;
@@ -68,8 +71,12 @@
     display: inline-block;
   }
 
+  .navbar-list-items.responsive div {
+    display: block;
+    padding: 0.5rem 0;
+  }
   .navbar-list-items.responsive .list-element {
-    display: inline;
+    display: inline-block;
     margin-right: 0;
   }
   .navbar-list-items.responsive .list-element .navbar-link {

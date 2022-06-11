@@ -19,6 +19,10 @@ $burgerIconSize      : 1.5rem;
 	position   : relative;
 	list-style : none;
 	padding    : 0;
+
+	div {
+	  display : inline;
+	}
   }
 }
 
@@ -85,16 +89,17 @@ $burgerIconSize      : 1.5rem;
 
   .navbar-list-items {
 	&.responsive {
+	  div {
+		display : block;
+		padding : $indent 0;
+	  }
+
 	  .list-element {
-		display      : inline;
+		display      : inline-block;
 		margin-right : 0;
 
 		.navbar-link {
 		  display : block;
-		}
-
-		&::after {
-		  //display : none;
 		}
 	  }
 	}
