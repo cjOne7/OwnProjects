@@ -1,5 +1,6 @@
 import React from 'react';
 import './navigation_responsive1.css';
+import {Link, NavLink, Outlet} from "react-router-dom";
 
 const NavigationResponsiveBar1 = () => {
     const navbarId = 'navbar';
@@ -16,7 +17,8 @@ const NavigationResponsiveBar1 = () => {
         <div>
             <nav role={"navigation"} className={'navbar-container'}>
                 <ul className={className} id={'navbar'}>
-                    <a href="#home" className={'list-header'}>Home</a>
+                    {/*<a href="#home" className={'list-header'}>Home</a>*/}
+                    <Link to={'/'} className={'list-header'}>Home</Link>
                     <div>
                         <li className={'list-element'}>
                             <a href="#mmorpg" className={'navbar-link'}>MMORPG</a>
@@ -43,6 +45,8 @@ const NavigationResponsiveBar1 = () => {
                     </li>
                 </ul>
             </nav>
+
+            <Outlet/>
         </div>
     );
 };

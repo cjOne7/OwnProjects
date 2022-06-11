@@ -76,7 +76,7 @@ $burgerIconSize      : 1.5rem;
 .list-header {
   display      : inline-block;
   margin-right : $indent * 2;
-  padding      : $indent 0;
+  padding      : $indent * 1.5 0;
   @include stylizedNavLink(white, $indent * 3.4);
 }
 
