@@ -74,24 +74,19 @@
 
 @media screen and (max-width: 680px) {
   .navbar-list-items .list-element {
-    transition: 1s;
     display: none;
   }
 
   .burger-menu-container {
     display: flex !important;
     justify-content: right !important;
-    transition: 1s;
   }
-}
-@media screen and (max-width: 680px) {
+
   .navbar-list-items {
     display: block;
-    transition: 1s;
   }
   .navbar-list-items.responsive {
     display: block;
-    transition: 1s;
   }
   .navbar-list-items.responsive div {
     justify-content: left;
@@ -99,7 +94,6 @@
   .navbar-list-items.responsive .list-element {
     display: flex;
     justify-content: left;
-    transition: 1s;
   }
 
   .burger-icon-container {

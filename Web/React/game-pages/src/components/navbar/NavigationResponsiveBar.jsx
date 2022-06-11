@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NavBarItem = () => {
+const NavigationResponsiveBar = () => {
     return (
         <div>
 
@@ -8,4 +8,4 @@ const NavBarItem = () => {
     );
 };
 
-export default NavBarItem;
+export default NavigationResponsiveBar;

@@ -91,26 +91,20 @@ $burgerIconSize      : 3.5rem;
 @media screen and (max-width : 680px) {
   .navbar-list-items {
 	.list-element {
-	  transition : 1s;
-	  display    : none;
+	  display : none;
 	}
   }
 
   .burger-menu-container {
 	display         : flex !important;
 	justify-content : right !important;
-	transition      : 1s;
   }
-}
 
-@media screen and (max-width : 680px) {
   .navbar-list-items {
-	display    : block;
-	transition : 1s;
+	display : block;
 
 	&.responsive {
-	  display    : block;
-	  transition : 1s;
+	  display : block;
 
 	  div {
 		justify-content : left;
@@ -119,7 +113,6 @@ $burgerIconSize      : 3.5rem;
 	  .list-element {
 		display         : flex;
 		justify-content : left;
-		transition      : 1s;
 	  }
 	}
   }
