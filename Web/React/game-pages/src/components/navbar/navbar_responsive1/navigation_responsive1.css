@@ -1,3 +1,80 @@
+.navbar-container {
+  background-color: #343a40;
+  padding: 0.5rem 0;
+}
+.navbar-container .navbar-list-items {
+  width: 80%;
+  margin: auto;
+  position: relative;
+  list-style: none;
+  padding: 0;
+}
 
+.list-element {
+  display: inline;
+  position: relative;
+  margin-right: 0.5rem;
+}
+.list-element::after {
+  content: "";
+  color: darkgray;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1rem;
+  border-bottom: 1px solid darkgray;
+  transition: width 0.3s;
+}
+.list-element:hover::after {
+  width: 100%;
+}
+.list-element .navbar-link {
+  text-decoration: none;
+  color: darkgray;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+.list-element .navbar-link:hover {
+  color: #cfcfcf;
+}
+
+.icon {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.icon .navbar-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.list-header {
+  display: inline;
+  margin-right: 1rem;
+}
+.list-header .navbar-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.7rem;
+}
+
+@media screen and (max-width: 680px) {
+  .navbar-list-items .list-element {
+    display: none;
+  }
+  .navbar-list-items .icon {
+    display: inline-block;
+  }
+
+  .navbar-list-items.responsive .list-element {
+    display: inline;
+    margin-right: 0;
+  }
+  .navbar-list-items.responsive .list-element .navbar-link {
+    display: block;
+  }
+}
 
 /*# sourceMappingURL=navigation_responsive1.css.map */

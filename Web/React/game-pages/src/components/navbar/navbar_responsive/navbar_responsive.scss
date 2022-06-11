@@ -4,51 +4,60 @@ ul.topnav {
   padding          : 0;
   overflow         : hidden;
   background-color : #333;
-}
 
-ul.topnav li {
-  float : left;
-}
+  li {
+	float    : left;
+	position : relative;
 
-ul.topnav li a {
-  display         : inline-block;
-  color           : #f2f2f2;
-  text-align      : center;
-  padding         : 14px 16px;
-  text-decoration : none;
-  transition      : .3s;
-  font-size       : 17px;
-}
+	&.icon {
+	  display : none;
+	}
 
-ul.topnav li a:hover {
-  background-color : #555;
-}
+	a {
+	  display         : inline-block;
+	  color           : #f2f2f2;
+	  text-align      : center;
+	  text-decoration : none;
+	  padding         : 14px 16px;
+	  transition      : .3s;
+	  font-size       : 17px;
 
-ul.topnav li.icon {
-  display : none;
+	  &:hover {
+		background-color : #555;
+	  }
+	}
+  }
 }
 
 @media screen and (max-width : 680px) {
-  ul.topnav li:not(:first-child) {
-	display : none;
-  }
-  ul.topnav li.icon {
-	float   : right;
-	display : inline-block;
-  }
+  ul.topnav {
+	li {
+	  &:not(:first-child) {
+		display : none;
+	  }
 
-  ul.topnav.responsive li.icon {
-	position : absolute;
-	right    : 0;
-	top      : 0;
-  }
+	  &.icon {
+		float   : right;
+		display : inline-block;
+	  }
+	}
 
-  ul.topnav.responsive li {
-	float   : none;
-	display : inline;
-  }
-  ul.topnav.responsive li a {
-	display    : block;
-	text-align : left;
+	&.responsive {
+	  li {
+		float   : none;
+		display : inline;
+
+		&.icon {
+		  position : absolute;
+		  right    : 0;
+		  top      : 0;
+		}
+
+		a {
+		  display    : block;
+		  text-align : left;
+		}
+	  }
+	}
   }
 }

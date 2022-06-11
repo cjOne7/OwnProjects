@@ -2,11 +2,21 @@ import React from 'react';
 import './navigation_responsive1.css';
 
 const NavigationResponsiveBar1 = () => {
+    const navbarId = 'navbar';
+    const className = 'navbar-list-items';
+    const showResponsiveNavItems = () => {
+        const navbar = document.getElementById(navbarId);
+        if (navbar.className === className) {
+            navbar.className += ' responsive';
+        } else {
+            navbar.className = className;
+        }
+    };
     return (
         <div>
             <nav role={"navigation"} className={'navbar-container'}>
-                <ul className={'navbar-list-items'}>
-                    <li className={'list-element'}>
+                <ul className={className} id={'navbar'}>
+                    <li className={'list-header'}>
                         <a href="#home" className={'navbar-link'}>Home</a>
                     </li>
                     <li className={'list-element'}>
@@ -21,7 +31,10 @@ const NavigationResponsiveBar1 = () => {
                     <li className={'list-element'}>
                         <a href="#contact" className={'navbar-link'}>Contact us</a>
                     </li>
-                    <li><a href="javascript:void(0)">&#9776;</a></li>
+                    <li className={'icon'}>
+                        <a href="javascript:void(0)" className={'navbar-link'}
+                           onClick={() => showResponsiveNavItems()}>&#9776;</a>
+                    </li>
                 </ul>
             </nav>
         </div>

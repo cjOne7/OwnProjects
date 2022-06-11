@@ -1,123 +1,123 @@
-$bgNavBarColor       : rgba(52, 58, 64, 1);
-$navbarItemTextColor : darkgray;
-$indent              : .5rem;
-$burgerIconSize      : 3.5rem;
-
-@mixin stylizedNavLink($fontSize) {
-  text-decoration : none;
-  color           : $navbarItemTextColor;
-  font-size       : $fontSize;
-}
-
-.navbar-container {
-  background-color : $bgNavBarColor;
-  position         : relative;
-
-  .navbar-list-items {
-	display         : flex;
-	padding         : 0;
-	text-decoration : none;
-	width           : 80%;
-	margin          : auto;
-	position        : relative;
-	min-height      : $burgerIconSize;
-
-	div {
-	  display         : flex;
-	  align-items     : center;
-	  justify-content : center;
-	}
-
-	.navbar-header {
-	  @include stylizedNavLink($indent * 3.4);
-	  margin-right : $indent * 2;
-	  color        : white;
-	}
-
-	.list-element {
-	  list-style   : none;
-	  position     : relative;
-	  margin-right : $indent;
-
-	  &::after {
-		content       : "";
-		color         : $navbarItemTextColor;
-		position      : absolute;
-		bottom        : 0;
-		left          : 0;
-		width         : 20%;
-		border-bottom : 1px solid $navbarItemTextColor;
-		transition    : width .3s;
-	  }
-
-	  &:hover::after {
-		width : 100%;
-	  }
-
-	  .navbar-link {
-		@include stylizedNavLink($indent * 2.4);
-		white-space : nowrap;
-		transition  : color .3s;
-
-		&:hover {
-		  color : lighten(darkgray, 15%);
-		}
-	  }
-	}
-  }
-}
-
-.burger-menu-container {
-  display         : none !important;
-  width           : 100%;
-  justify-content : right;
-
-  .burger-icon-container {
-	height     : $burgerIconSize;
-	width      : $burgerIconSize;
-	transition : background-color .3s;
-
-	&:hover {
-	  background-color : lighten($bgNavBarColor, 10%);
-	  cursor           : pointer;
-	}
-  }
-
-  .burger-icon {
-	@include stylizedNavLink($indent * 3);
-  }
-}
-
-@media screen and (max-width : 680px) {
-  .navbar-list-items {
-	.list-element {
-	  display : none;
-	}
-  }
-
-  .burger-menu-container {
-	display         : flex !important;
-	justify-content : right !important;
-  }
-
-  .navbar-list-items {
-	display : block;
-
-	&.responsive {
-	  display : block;
-
-	  div {
-		justify-content : left;
-	  }
-
-	  .list-element {
-		display         : flex;
-		justify-content : left;
-	  }
-	}
-  }
-
-  .burger-icon-container {
-	justify-content : center !important;
-  }
-}
+//$bgNavBarColor       : rgba(52, 58, 64, 1);
+//$navbarItemTextColor : darkgray;
+//$indent              : .5rem;
+//$burgerIconSize      : 3.5rem;
+//
+//@mixin stylizedNavLink($fontSize) {
+//  text-decoration : none;
+//  color           : $navbarItemTextColor;
+//  font-size       : $fontSize;
+//}
+//
+//.navbar-container {
+//  background-color : $bgNavBarColor;
+//  position         : relative;
+//
+//  .navbar-list-items {
+//	display         : flex;
+//	padding         : 0;
+//	text-decoration : none;
+//	width           : 80%;
+//	margin          : auto;
+//	position        : relative;
+//	min-height      : $burgerIconSize;
+//
+//	div {
+//	  display         : flex;
+//	  align-items     : center;
+//	  justify-content : center;
+//	}
+//
+//	.navbar-header {
+//	  @include stylizedNavLink($indent * 3.4);
+//	  margin-right : $indent * 2;
+//	  color        : white;
+//	}
+//
+//	.list-element {
+//	  list-style   : none;
+//	  position     : relative;
+//	  margin-right : $indent;
+//
+//	  &::after {
+//		content       : "";
+//		color         : $navbarItemTextColor;
+//		position      : absolute;
+//		bottom        : 0;
+//		left          : 0;
+//		width         : 20%;
+//		border-bottom : 1px solid $navbarItemTextColor;
+//		transition    : width .3s;
+//	  }
+//
+//	  &:hover::after {
+//		width : 100%;
+//	  }
+//
+//	  .navbar-link {
+//		@include stylizedNavLink($indent * 2.4);
+//		white-space : nowrap;
+//		transition  : color .3s;
+//
+//		&:hover {
+//		  color : lighten(darkgray, 15%);
+//		}
+//	  }
+//	}
+//  }
+//}
+//
+//.burger-menu-container {
+//  display         : none !important;
+//  width           : 100%;
+//  justify-content : right;
+//
+//  .burger-icon-container {
+//	height     : $burgerIconSize;
+//	width      : $burgerIconSize;
+//	transition : background-color .3s;
+//
+//	&:hover {
+//	  background-color : lighten($bgNavBarColor, 10%);
+//	  cursor           : pointer;
+//	}
+//  }
+//
+//  .burger-icon {
+//	@include stylizedNavLink($indent * 3);
+//  }
+//}
+//
+//@media screen and (max-width : 680px) {
+//  .navbar-list-items {
+//	.list-element {
+//	  display : none;
+//	}
+//  }
+//
+//  .burger-menu-container {
+//	display         : flex !important;
+//	justify-content : right !important;
+//  }
+//
+//  .navbar-list-items {
+//	display : block;
+//
+//	&.responsive {
+//	  display : block;
+//
+//	  div {
+//		justify-content : left;
+//	  }
+//
+//	  .list-element {
+//		display         : flex;
+//		justify-content : left;
+//	  }
+//	}
+//  }
+//
+//  .burger-icon-container {
+//	justify-content : center !important;
+//  }
+//}

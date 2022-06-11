@@ -1,19 +1,102 @@
-.navbar-container {
+$bgNavBarColor       : rgba(52, 58, 64, 1);
+$navbarItemTextColor : darkgray;
+$indent              : .5rem;
+$burgerIconSize      : 1.5rem;
 
+@mixin stylizedNavLink($color, $fontSize) {
+  text-decoration : none;
+  color           : $color;
+  font-size       : $fontSize;
 }
 
-.navbar-list-items {
+.navbar-container {
+  background-color : $bgNavBarColor;
+  padding          : $indent 0;
 
+  .navbar-list-items {
+	width      : 80%;
+	margin     : auto;
+	position   : relative;
+	list-style : none;
+	padding    : 0;
+  }
 }
 
 .list-element {
+  display      : inline;
+  position     : relative;
+  margin-right : $indent;
 
+  &::after {
+	content       : "";
+	color         : $navbarItemTextColor;
+	position      : absolute;
+	bottom        : 0;
+	left          : 0;
+	width         : 1rem;
+	border-bottom : 1px solid $navbarItemTextColor;
+	transition    : width .3s;
+  }
+
+  &:hover::after {
+	width : 100%;
+  }
+
+  .navbar-link {
+	@include stylizedNavLink($navbarItemTextColor, $indent * 2.4);
+	transition : color .3s;
+
+	&:hover {
+	  color : lighten($navbarItemTextColor, 15%);
+	}
+  }
 }
 
-.navbar-link {
+.icon {
+  display  : none;
+  position : absolute;
+  top      : 0;
+  right    : 0;
 
+  .navbar-link {
+	@include stylizedNavLink(white, $burgerIconSize);
+  }
+}
+
+.list-header {
+  display      : inline;
+  margin-right : $indent * 2;
+
+  .navbar-link {
+	@include stylizedNavLink(white, $indent * 3.4);
+  }
 }
 
 @media screen and (max-width : 680px) {
+  .navbar-list-items {
+	.list-element {
+	  display : none;
+	}
 
+	.icon {
+	  display : inline-block;
+	}
+  }
+
+  .navbar-list-items {
+	&.responsive {
+	  .list-element {
+		display      : inline;
+		margin-right : 0;
+
+		.navbar-link {
+		  display : block;
+		}
+
+		&::after {
+		  //display : none;
+		}
+	  }
+	}
+  }
 }
