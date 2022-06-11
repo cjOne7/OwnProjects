@@ -1,3 +1,91 @@
+.navbar-container {
+  background-color: #343A40;
+  min-height: 3rem;
+}
+.navbar-container .navbar-list-items {
+  width: 80%;
+  margin: auto;
+  position: relative;
+  list-style: none;
+  padding: 0;
+}
+.navbar-container .navbar-list-items div {
+  display: inline;
+}
 
+.list-element {
+  display: inline;
+  position: relative;
+  margin-right: 0.5rem;
+}
+.list-element::after {
+  content: "";
+  color: darkgray;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1rem;
+  border-bottom: 1px solid darkgray;
+  transition: width 0.3s;
+}
+.list-element:hover::after {
+  width: 100%;
+}
+.list-element .navbar-link {
+  text-decoration: none;
+  color: darkgray;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+.list-element .navbar-link:hover {
+  color: #cfcfcf;
+}
+
+.icon {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: background-color 0.3s;
+  padding: 0.75rem 0.85rem;
+}
+.icon:hover {
+  background-color: #3f474e;
+}
+.icon .navbar-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.list-header {
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 0.75rem 0;
+  text-decoration: none;
+  color: white;
+  font-size: 1.7rem;
+}
+
+@media screen and (max-width: 680px) {
+  .navbar-list-items .list-element {
+    display: none;
+  }
+  .navbar-list-items .icon {
+    display: inline-block;
+  }
+
+  .navbar-list-items.responsive div {
+    display: block;
+    padding: 0.5rem 0;
+  }
+  .navbar-list-items.responsive .list-element {
+    display: inline-block;
+    margin-right: 0;
+  }
+  .navbar-list-items.responsive .list-element .navbar-link {
+    display: block;
+  }
+}
 
 /*# sourceMappingURL=navbar.css.map */

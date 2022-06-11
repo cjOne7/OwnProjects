@@ -1,6 +1,10 @@
 import React from 'react';
 import './navigation_responsive1.css';
 import {Link, NavLink, Outlet} from "react-router-dom";
+import {routes} from '../../../routes';
+
+const navbarLinkClass = 'navbar-link';
+const navbarLinkElement = 'list-element';
 
 const NavigationResponsiveBar1 = () => {
     const navbarId = 'navbar';
@@ -17,30 +21,29 @@ const NavigationResponsiveBar1 = () => {
         <div>
             <nav role={"navigation"} className={'navbar-container'}>
                 <ul className={className} id={'navbar'}>
-                    {/*<a href="#home" className={'list-header'}>Home</a>*/}
                     <Link to={'/'} className={'list-header'}>Home</Link>
                     <div>
-                        <li className={'list-element'}>
-                            <a href="#mmorpg" className={'navbar-link'}>MMORPG</a>
+                        <li className={navbarLinkElement}>
+                            <NavLink to={routes.mmorpg} className={navbarLinkClass}>MMORPG</NavLink>
                         </li>
                     </div>
                     <div>
-                        <li className={'list-element'}>
-                            <a href="#shooters" className={'navbar-link'}>Shooters</a>
+                        <li className={navbarLinkElement}>
+                            <NavLink to={routes.shooters} className={navbarLinkClass}>Shooters</NavLink>
                         </li>
                     </div>
                     <div>
-                        <li className={'list-element'}>
-                            <a href="#hack&slash" className={'navbar-link'}>Hach&Slash</a>
+                        <li className={navbarLinkElement}>
+                            <NavLink to={routes.hack_and_slash} className={navbarLinkClass}>Hack&Slash</NavLink>
                         </li>
                     </div>
                     <div>
-                        <li className={'list-element'}>
-                            <a href="#contact" className={'navbar-link'}>Contact us</a>
+                        <li className={navbarLinkElement}>
+                            <NavLink to={routes.contact_form} className={navbarLinkClass}>Contact form</NavLink>
                         </li>
                     </div>
                     <li className={'icon'}>
-                        <a href="javascript:void(0)" className={'navbar-link'}
+                        <a href="javascript:void(0)" className={navbarLinkClass}
                            onClick={() => showResponsiveNavItems()}>&#9776;</a>
                     </li>
                 </ul>

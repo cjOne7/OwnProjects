@@ -62,7 +62,7 @@ $burgerIconSize      : 1.5rem;
   top        : 0;
   right      : 0;
   transition : background-color .3s;
-  padding    : $indent $indent * 1.7;
+  padding    : $indent * 1.5 $indent * 1.7;
 
   &:hover {
 	background-color : lighten(#343A40, 5%);
