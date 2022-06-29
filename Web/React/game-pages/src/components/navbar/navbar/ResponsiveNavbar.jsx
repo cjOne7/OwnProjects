@@ -7,7 +7,7 @@ import NavbarHeader from "./NavbarHeader";
 
 const ResponsiveNavbar = () => {
     const navbarBodyId = 'navbar-ul';
-    const [isBurgerMenuClicked, setIsBurgerMenuClicked] = useState(false);
+    // const [isBurgerMenuClicked, setIsBurgerMenuClicked] = useState(false);
 
     return (
         <div>
