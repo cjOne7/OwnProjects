@@ -16,7 +16,7 @@ const NavbarMenuIcon = ({navbarBodyId}) => {
 };
 
 NavbarMenuIcon.propTypes = {
-    navbarBodyId: PropTypes.number.isRequired
+    navbarBodyId: PropTypes.string.isRequired
 }
 
 export default NavbarMenuIcon;

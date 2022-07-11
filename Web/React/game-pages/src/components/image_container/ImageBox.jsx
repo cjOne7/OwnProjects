@@ -7,7 +7,7 @@ const ImageBox = ({image}) => {
         <div className={'image-box'} style={{backgroundImage: `url(${image.imageLocation})`}}>
             <PseudoBorder clazz={'border-top-bottom'}/>
             <PseudoBorder clazz={'border-left-right'}/>
-            <ImageContent clazz={'image-content'} imageTitle={image.title}/>
+            <ImageContent imageTitle={image.title} imageText={image.text}/>
         </div>
     );
 };

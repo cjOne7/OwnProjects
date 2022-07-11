@@ -81,9 +81,9 @@ $indent         : 10px;
   transform        : translateY(100%);
   transition       : $transitionTime;
 
-  h2 {
-	text-transform : uppercase;
-  }
+  //h2 {
+	//text-transform : uppercase;
+  //}
 
   p {
 	text-indent : $indent * 3;

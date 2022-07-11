@@ -4,7 +4,8 @@ import ImageContainer from "../../image_container/ImageContainer";
 const Mmorpg = () => {
     return (
         <div>
-            <ImageContainer index={0}/>
+            {/* TODO get genre from URL*/}
+            <ImageContainer genre={"mmorpg"}/>
         </div>
     );
 };

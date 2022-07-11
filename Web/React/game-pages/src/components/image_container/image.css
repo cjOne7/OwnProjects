@@ -76,9 +76,6 @@
   transform: translateY(100%);
   transition: 1.5s;
 }
-.image-content h2 {
-  text-transform: uppercase;
-}
 .image-content p {
   text-indent: 30px;
   line-height: 1.5em;
