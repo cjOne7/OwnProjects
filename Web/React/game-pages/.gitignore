@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/src/components/navbar/navbar_fail/
+/src/components/navbar/navbar_responsive1/
+/src/components/navbar/navbar_template/

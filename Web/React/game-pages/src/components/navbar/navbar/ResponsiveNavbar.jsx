@@ -1,14 +1,12 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {routes} from "../../../routes";
 import './navbar.css';
+import NavbarHeader from "./NavbarHeader";
 import NavbarItem from "./NavbarItem";
 import NavbarMenuIcon from "./NavbarMenuIcon";
-import NavbarHeader from "./NavbarHeader";
 
 const ResponsiveNavbar = () => {
     const navbarBodyId = 'navbar-ul';
-    // const [isBurgerMenuClicked, setIsBurgerMenuClicked] = useState(false);
-
     return (
         <div>
             <nav role={"navigation"} className={'navbar-container'}>

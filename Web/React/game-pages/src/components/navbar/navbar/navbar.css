@@ -40,6 +40,9 @@
 .list-element .navbar-link:hover {
   color: #cfcfcf;
 }
+.list-element .navbar-link.active {
+  color: white;
+}
 
 .icon {
   display: none;

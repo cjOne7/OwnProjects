@@ -53,6 +53,10 @@ $burgerIconSize      : 1.5rem;
 	&:hover {
 	  color : lighten($navbarItemTextColor, 15%);
 	}
+
+	&.active {
+	  color : white;
+	}
   }
 }
 
