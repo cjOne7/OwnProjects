@@ -8,8 +8,8 @@
 .image-container .image-box-wrapper {
   border: 1px solid black;
   display: flex;
-  width: 80%;
-  height: 85%;
+  width: 70%;
+  height: 75%;
 }
 
 .image-box {
@@ -19,7 +19,7 @@
   flex-grow: 1;
   opacity: 0.7;
   filter: grayscale(1);
-  transition: 1.5s ease-in-out;
+  transition: 1.2s ease-in-out;
   position: relative;
   overflow: hidden;
 }
@@ -30,31 +30,31 @@
   filter: grayscale(0);
 }
 .image-box:hover .border-top-bottom::before {
-  transition: 1.5s;
+  transition: 1.2s;
   transition-delay: 0.3s;
   opacity: 1;
   transform: translateX(100%);
 }
 .image-box:hover .border-top-bottom::after {
-  transition: 1.5s;
+  transition: 1.2s;
   transition-delay: 0.3s;
   opacity: 1;
   transform: translateX(-100%);
 }
 .image-box:hover .border-left-right::before {
-  transition: 1.5s;
+  transition: 1.2s;
   transition-delay: 0.3s;
   opacity: 1;
   transform: translateY(100%);
 }
 .image-box:hover .border-left-right::after {
-  transition: 1.5s;
+  transition: 1.2s;
   transition-delay: 0.3s;
   opacity: 1;
   transform: translateY(-100%);
 }
 .image-box:hover .image-content {
-  transition-delay: 1.5s;
+  transition-delay: 1.2s;
   transform: translateY(-10%);
   opacity: 0.7;
 }
@@ -70,7 +70,7 @@
   text-align: justify;
   width: 70%;
   transform: translateY(100%);
-  transition: 1.5s;
+  transition: 1.2s;
 }
 .image-content p {
   text-indent: 1.5rem;
