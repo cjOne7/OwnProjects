@@ -1,0 +1,27 @@
+@use "../../../styles/variables" as vars;
+
+$burgerIconSize : 1.5rem;
+
+@mixin stylizedNavLink($color, $fontSize) {
+  text-decoration : none;
+  color           : $color;
+  font-size       : $fontSize;
+}
+
+.icon {
+  display    : none;
+  position   : absolute;
+  cursor     : pointer;
+  top        : 0;
+  right      : 0;
+  transition : background-color .3s;
+  padding    : vars.$indent * 1.5 vars.$indent * 1.7;
+
+  &:hover {
+	background-color : lighten(#343A40, 5%);
+  }
+
+  .navbar-link {
+	@include stylizedNavLink(white, $burgerIconSize);
+  }
+}

@@ -1,3 +1,21 @@
+.icon {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  transition: background-color 0.3s;
+  padding: 0.75rem 0.85rem;
+}
+.icon:hover {
+  background-color: #3f474e;
+}
+.icon .navbar-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
 .navbar-container {
   background-color: #343A40;
   min-height: 3rem;
@@ -18,7 +36,13 @@
   position: relative;
   margin-right: 0.5rem;
 }
-.list-element::after {
+.list-element .navbar-link {
+  text-decoration: none;
+  color: darkgray;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+.list-element .navbar-link::after {
   content: "";
   color: darkgray;
   position: absolute;
@@ -28,38 +52,17 @@
   border-bottom: 1px solid darkgray;
   transition: width 0.3s;
 }
-.list-element:hover::after {
-  width: 100%;
-}
-.list-element .navbar-link {
-  text-decoration: none;
-  color: darkgray;
-  font-size: 1.2rem;
-  transition: color 0.3s;
-}
 .list-element .navbar-link:hover {
   color: #cfcfcf;
+}
+.list-element .navbar-link:hover::after {
+  width: 100%;
 }
 .list-element .navbar-link.active {
   color: white;
 }
-
-.icon {
-  display: none;
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  right: 0;
-  transition: background-color 0.3s;
-  padding: 0.75rem 0.85rem;
-}
-.icon:hover {
-  background-color: #3f474e;
-}
-.icon .navbar-link {
-  text-decoration: none;
-  color: white;
-  font-size: 1.5rem;
+.list-element .navbar-link.active::after {
+  width: 100%;
 }
 
 .list-header {

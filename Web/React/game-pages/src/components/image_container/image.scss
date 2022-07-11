@@ -1,4 +1,5 @@
-@import "../../styles/mixins";
+@use "../../styles/variables" as vars;
+@use "../../styles/mixins";
 
 @mixin onMouseHoverEffects($bgSizes, $flewGrow, $opacity, $filter) {
   background-size : $bgSizes;
@@ -12,10 +13,10 @@
   justify-content : center;
   align-items     : center;
   height          : 80vh;
-  @include border(1px, solid, black);
+  @include mixins.border(1px, solid, black);
 
   .image-box-wrapper {
-	@include border(1px, solid, black);
+	@include mixins.border(1px, solid, black);
 	display : flex;
 	width   : 80%;
 	height  : 85%;
@@ -66,27 +67,21 @@ $transitionTime : 1.5s;
   }
 }
 
-$indent         : 10px;
-
 .image-content {
   position         : absolute;
   bottom           : 0;
-  right            : $indent;
+  right            : vars.$indent;
   background-color : black;
   opacity          : .3;
   color            : white;
-  padding          : $indent $indent * 1.5;
+  padding          : vars.$indent vars.$indent * 2;
   text-align       : justify;
   width            : 70%;
   transform        : translateY(100%);
   transition       : $transitionTime;
 
-  //h2 {
-	//text-transform : uppercase;
-  //}
-
   p {
-	text-indent : $indent * 3;
-	line-height : 1.5em;
+	text-indent : vars.$indent * 3;
+	line-height : 1.5rem;
   }
 }

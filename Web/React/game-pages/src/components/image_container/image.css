@@ -66,19 +66,19 @@
 .image-content {
   position: absolute;
   bottom: 0;
-  right: 10px;
+  right: 0.5rem;
   background-color: black;
   opacity: 0.3;
   color: white;
-  padding: 10px 15px;
+  padding: 0.5rem 1rem;
   text-align: justify;
   width: 70%;
   transform: translateY(100%);
   transition: 1.5s;
 }
 .image-content p {
-  text-indent: 30px;
-  line-height: 1.5em;
+  text-indent: 1.5rem;
+  line-height: 1.5rem;
 }
 
 /*# sourceMappingURL=image.css.map */

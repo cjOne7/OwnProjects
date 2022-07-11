@@ -1,8 +1,7 @@
-@use "../../../styles/variables";
+@use "../../../styles/variables" as vars;
+@import "icon";
 
 $navbarItemTextColor : darkgray;
-$indent              : .5rem;
-$burgerIconSize      : 1.5rem;
 
 @mixin stylizedNavLink($color, $fontSize) {
   text-decoration : none;
@@ -11,7 +10,7 @@ $burgerIconSize      : 1.5rem;
 }
 
 .navbar-container {
-  background-color : variables.$bgNavBarColor;
+  background-color : vars.$bgNavBarColor;
   min-height       : 3rem;
 
   .navbar-list-items {
@@ -30,60 +29,47 @@ $burgerIconSize      : 1.5rem;
 .list-element {
   display      : inline;
   position     : relative;
-  margin-right : $indent;
-
-  &::after {
-	content       : "";
-	color         : $navbarItemTextColor;
-	position      : absolute;
-	bottom        : 0;
-	left          : 0;
-	width         : 1rem;
-	border-bottom : 1px solid $navbarItemTextColor;
-	transition    : width .3s;
-  }
-
-  &:hover::after {
-	width : 100%;
-  }
+  margin-right : vars.$indent;
 
   .navbar-link {
-	@include stylizedNavLink($navbarItemTextColor, $indent * 2.4);
+	@include stylizedNavLink($navbarItemTextColor, vars.$indent * 2.4);
 	transition : color .3s;
+
+	&::after {
+	  content       : "";
+	  color         : $navbarItemTextColor;
+	  position      : absolute;
+	  bottom        : 0;
+	  left          : 0;
+	  width         : 1rem;
+	  border-bottom : 1px solid $navbarItemTextColor;
+	  transition    : width .3s;
+	}
 
 	&:hover {
 	  color : lighten($navbarItemTextColor, 15%);
+
+	  &::after {
+		width : 100%;
+	  }
 	}
 
+	//Styling for NavLink tag from React Router DOM
 	&.active {
 	  color : white;
+
+	  &::after {
+		width : 100%;
+	  }
 	}
-  }
-}
-
-.icon {
-  display    : none;
-  position   : absolute;
-  cursor     : pointer;
-  top        : 0;
-  right      : 0;
-  transition : background-color .3s;
-  padding    : $indent * 1.5 $indent * 1.7;
-
-  &:hover {
-	background-color : lighten(#343A40, 5%);
-  }
-
-  .navbar-link {
-	@include stylizedNavLink(white, $burgerIconSize);
   }
 }
 
 .list-header {
   display      : inline-block;
-  margin-right : $indent * 2;
-  padding      : $indent * 1.5 0;
-  @include stylizedNavLink(white, $indent * 3.4);
+  margin-right : vars.$indent * 2;
+  padding      : vars.$indent * 1.5 0;
+  @include stylizedNavLink(white, vars.$indent * 3.4);
 }
 
 @media screen and (max-width : 680px) {
@@ -101,7 +87,7 @@ $burgerIconSize      : 1.5rem;
 	&.responsive {
 	  div {
 		display : block;
-		padding : $indent 0;
+		padding : vars.$indent 0;
 	  }
 
 	  .list-element {
