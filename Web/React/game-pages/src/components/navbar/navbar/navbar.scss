@@ -1,4 +1,5 @@
-$bgNavBarColor       : #343A40;
+@use "../../../styles/variables";
+
 $navbarItemTextColor : darkgray;
 $indent              : .5rem;
 $burgerIconSize      : 1.5rem;
@@ -10,7 +11,7 @@ $burgerIconSize      : 1.5rem;
 }
 
 .navbar-container {
-  background-color : $bgNavBarColor;
+  background-color : variables.$bgNavBarColor;
   min-height       : 3rem;
 
   .navbar-list-items {
