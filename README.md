@@ -1,2 +1,2 @@
 # OwnProjects
-This perository was created to store my own projects/libraries.
+This rerository was created to store my own projects/libraries.
