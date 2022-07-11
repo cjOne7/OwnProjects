@@ -1,22 +1,12 @@
 @use "../../styles/variables" as vars;
-@use "../../styles/mixins";
-
-@mixin onMouseHoverEffects($bgSizes, $flewGrow, $opacity, $filter) {
-  background-size : $bgSizes;
-  flex-grow       : $flewGrow;
-  opacity         : $opacity;
-  filter          : $filter;
-}
 
 .image-container {
   display         : flex;
   justify-content : center;
   align-items     : center;
   height          : 80vh;
-  @include mixins.border(border, 1px, solid, black);
 
   .image-box-wrapper {
-	@include mixins.border(border, 1px, solid, black);
 	display : flex;
 	width   : 70%;
 	height  : 75%;
@@ -24,6 +14,13 @@
 }
 
 $transitionTime : 1.2s;
+
+@mixin onMouseHoverEffects($bgSizes, $flewGrow, $opacity, $filter) {
+  background-size : $bgSizes;
+  flex-grow       : $flewGrow;
+  opacity         : $opacity;
+  filter          : $filter;
+}
 
 @mixin transitionForBorders($transformDirection) {
   transition       : $transitionTime;
