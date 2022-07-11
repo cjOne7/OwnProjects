@@ -1,0 +1,14 @@
+.home-container {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.home-header {
+  font-weight: 300;
+  font-size: 60px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+/*# sourceMappingURL=home_page_content.css.map */
