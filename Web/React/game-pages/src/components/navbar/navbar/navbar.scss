@@ -1,13 +1,9 @@
 @use "../../../styles/variables" as vars;
+@use "../../../styles/mixins";
 @import "icon";
+@import "navbar680px";
 
 $navbarItemTextColor : darkgray;
-
-@mixin stylizedNavLink($color, $fontSize) {
-  text-decoration : none;
-  color           : $color;
-  font-size       : $fontSize;
-}
 
 .navbar-container {
   background-color : vars.$bgNavBarColor;
@@ -32,18 +28,18 @@ $navbarItemTextColor : darkgray;
   margin-right : vars.$indent;
 
   .navbar-link {
-	@include stylizedNavLink($navbarItemTextColor, vars.$indent * 2.4);
+	@include mixins.stylizedNavLink($navbarItemTextColor, vars.$indent * 2.4);
 	transition : color .3s;
 
 	&::after {
-	  content       : "";
-	  color         : $navbarItemTextColor;
-	  position      : absolute;
-	  bottom        : 0;
-	  left          : 0;
-	  width         : 1rem;
-	  border-bottom : 1px solid $navbarItemTextColor;
-	  transition    : width .3s;
+	  content    : "";
+	  color      : $navbarItemTextColor;
+	  position   : absolute;
+	  bottom     : 0;
+	  left       : 0;
+	  width      : 1rem;
+	  @include mixins.border(border-bottom, 1px, solid, $navbarItemTextColor);
+	  transition : width .3s;
 	}
 
 	&:hover {
@@ -69,35 +65,5 @@ $navbarItemTextColor : darkgray;
   display      : inline-block;
   margin-right : vars.$indent * 2;
   padding      : vars.$indent * 1.5 0;
-  @include stylizedNavLink(white, vars.$indent * 3.4);
-}
-
-@media screen and (max-width : 680px) {
-  .navbar-list-items {
-	.list-element {
-	  display : none;
-	}
-
-	.icon {
-	  display : inline-block;
-	}
-  }
-
-  .navbar-list-items {
-	&.responsive {
-	  div {
-		display : block;
-		padding : vars.$indent 0;
-	  }
-
-	  .list-element {
-		display      : inline-block;
-		margin-right : 0;
-
-		.navbar-link {
-		  display : block;
-		}
-	  }
-	}
-  }
+  @include mixins.stylizedNavLink(white, vars.$indent * 3.4);
 }

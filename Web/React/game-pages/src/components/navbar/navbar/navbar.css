@@ -16,6 +16,25 @@
   font-size: 1.5rem;
 }
 
+@media screen and (max-width: 680px) {
+  .navbar-container .navbar-list-items .list-element {
+    display: none;
+  }
+  .navbar-container .navbar-list-items .icon {
+    display: inline-block;
+  }
+  .navbar-container .navbar-list-items.responsive div {
+    display: block;
+    padding: 0.5rem 0;
+  }
+  .navbar-container .navbar-list-items.responsive .list-element {
+    display: inline-block;
+    margin-right: 0;
+  }
+  .navbar-container .navbar-list-items.responsive .list-element .navbar-link {
+    display: block;
+  }
+}
 .navbar-container {
   background-color: #343A40;
   min-height: 3rem;
@@ -72,27 +91,6 @@
   text-decoration: none;
   color: white;
   font-size: 1.7rem;
-}
-
-@media screen and (max-width: 680px) {
-  .navbar-list-items .list-element {
-    display: none;
-  }
-  .navbar-list-items .icon {
-    display: inline-block;
-  }
-
-  .navbar-list-items.responsive div {
-    display: block;
-    padding: 0.5rem 0;
-  }
-  .navbar-list-items.responsive .list-element {
-    display: inline-block;
-    margin-right: 0;
-  }
-  .navbar-list-items.responsive .list-element .navbar-link {
-    display: block;
-  }
 }
 
 /*# sourceMappingURL=navbar.css.map */

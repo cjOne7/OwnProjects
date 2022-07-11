@@ -1,5 +1,9 @@
-@mixin border($borderWidth, $borderStyle, $borderColor) {
-  border-width : $borderWidth;
-  border-style : $borderStyle;
-  border-color : $borderColor;
+@mixin border($border, $borderWidth, $borderStyle, $borderColor) {
+  #{$border} : $borderWidth $borderStyle $borderColor;
+}
+
+@mixin stylizedNavLink($color, $fontSize) {
+  text-decoration : none;
+  color           : $color;
+  font-size       : $fontSize;
 }

@@ -1,12 +1,7 @@
 @use "../../../styles/variables" as vars;
+@use "../../../styles/mixins";
 
 $burgerIconSize : 1.5rem;
-
-@mixin stylizedNavLink($color, $fontSize) {
-  text-decoration : none;
-  color           : $color;
-  font-size       : $fontSize;
-}
 
 .icon {
   display    : none;
@@ -18,10 +13,10 @@ $burgerIconSize : 1.5rem;
   padding    : vars.$indent * 1.5 vars.$indent * 1.7;
 
   &:hover {
-	background-color : lighten(#343A40, 5%);
+	background-color : lighten(vars.$bgNavBarColor, 5%);
   }
 
   .navbar-link {
-	@include stylizedNavLink(white, $burgerIconSize);
+	@include mixins.stylizedNavLink(white, $burgerIconSize);
   }
 }
