@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 const NavbarItem = ({path, linkText}) => {
     return (
         <div>
-            {/*TODO add active navlink style */}
             <li className={'list-element'}>
                 <NavLink to={path} className={'navbar-link'}>{linkText}</NavLink>
             </li>
