@@ -1,0 +1,91 @@
+//TODO rework this btn-link
+.btn {
+  padding          : 0.625rem 1.875rem;
+  background-color : rgb(51, 43, 43);
+  color            : whitesmoke;
+  border-radius    : 0.3125rem;
+  border           : 1px solid #fff;
+  z-index          : 10;
+  width            : 15%;
+  min-width        : 150px;
+  margin           : 2.8125rem auto 0 auto;
+  white-space      : nowrap;
+
+  .link-about {
+	display         : flex;
+	justify-content : center;
+	align-items     : baseline;
+
+	a {
+	  text-decoration : none;
+	  color           : whitesmoke;
+	}
+  }
+
+  &:hover {
+	color      : whitesmoke;
+	transition : 1s;
+	transform  : scale(0.97);
+	outline    : none;
+  }
+}
+
+#about {
+  padding         : 40px;
+  text-align      : center;
+  scroll-behavior : smooth;
+
+  p {
+	font-size : 1.2rem;
+	max-width : 600px;
+	margin    : auto;
+  }
+
+  h2 {
+	margin : 30px 0;
+	color  : yellow;
+  }
+}
+
+.showcase {
+  display        : flex;
+  flex-direction : column;
+  position       : relative;
+  height         : 100vh;
+}
+
+.video-container {
+  position : absolute;
+  top      : 0;
+  left     : 0;
+  //нужно в случае, если видео вылазит, чтобы его обрезать
+  overflow : hidden;
+  //нужно, чтобы контейнер с видео имел хоть какие-то размеры, иначе по умолчанию они равны 0
+  width    : 100%;
+  height   : 100%;
+  //filter   : grayscale(1);
+
+  video {
+	//нужно, чтобы видео хоть и с маленьким разрешеним, растянулось по максимуму на весь экран
+	min-width  : 100%;
+	min-height : 100%;
+	object-fit : cover;
+	//надо, чтобы при сжатии размеры видео подстраивались под окно
+	position   : absolute;
+	top        : 50%;
+	left       : 50%;
+	//но тогда оно будет съехавшее, поэтому с помощью перемещения вернём на место
+	transform  : translate(-50%, -50%);
+  }
+
+  &:after {
+	content          : "";
+	position         : absolute;
+	top              : 0;
+	left             : 0;
+	width            : 100%;
+	height           : 100%;
+	background-color : black;
+	opacity          : .5;
+  }
+}

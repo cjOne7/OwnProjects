@@ -1,0 +1,84 @@
+@use "../../../styles/variables" as vars;
+
+.image-container {
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  height          : 80vh;
+
+  .image-box-wrapper {
+	display : flex;
+	width   : 70%;
+	height  : 75%;
+  }
+}
+
+$transitionTime : 1.2s;
+
+@mixin onMouseHoverEffects($bgSizes, $flewGrow, $opacity, $filter) {
+  background-size : $bgSizes;
+  flex-grow       : $flewGrow;
+  opacity         : $opacity;
+  filter          : $filter;
+}
+
+@mixin transitionForBorders($transformDirection) {
+  transition       : $transitionTime;
+  transition-delay : .3s;
+  opacity          : 1;
+  transform        : $transformDirection;
+}
+
+.image-box {
+  background-position : center;
+  background-repeat   : no-repeat;
+  @include onMouseHoverEffects(50rem 40rem, 1, .7, grayscale(1));
+  transition          : $transitionTime ease-in-out;
+  position            : relative;
+  overflow            : hidden;
+
+  &:hover {
+	@include onMouseHoverEffects(70rem 45rem, 5, 1, grayscale(0));
+
+	.border-top-bottom::before {
+	  @include transitionForBorders(translateX(100%));
+	}
+
+	.border-top-bottom::after {
+	  @include transitionForBorders(translateX(-100%));
+	}
+
+	.border-left-right::before {
+	  @include transitionForBorders(translateY(100%));
+	}
+
+	.border-left-right::after {
+	  @include transitionForBorders(translateY(-100%));
+	}
+
+	.image-content {
+	  transition-delay : $transitionTime;
+	  transform        : translateY(-10%);
+	  opacity          : .7;
+	}
+  }
+}
+
+.image-content {
+  position         : absolute;
+  bottom           : 0;
+  right            : vars.$indent;
+  background-color : black;
+  opacity          : .3;
+  color            : white;
+  padding          : vars.$indent vars.$indent * 2;
+  text-align       : justify;
+  width            : 70%;
+  transform        : translateY(100%);
+  transition       : $transitionTime;
+
+  p {
+	text-indent : vars.$indent * 3;
+	line-height : 1.5rem;
+  }
+}

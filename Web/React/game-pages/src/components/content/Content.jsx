@@ -1,12 +1,14 @@
 import React from 'react';
-import ImageContainer from "../image_container/ImageContainer";
+import ImageContainer from "./image_container/ImageContainer";
 import {useLocation} from "react-router-dom";
 
 const Content = () => {
     const location = useLocation()
+    const genre = Array.from(location.pathname).splice(1).join('')
     return (
         <div>
-            <ImageContainer genre={Array.from(location.pathname).splice(1).join('')}/>
+            {/*TODO вынести содержимое с этого компонента (↓) сюда*/}
+            <ImageContainer genre={genre}/>
         </div>
     );
 };
