@@ -1,7 +1,7 @@
-@use "../../../styles/variables" as vars;
-@use "../../../styles/mixins";
-@import "icon";
-@import "navbar680px";
+@use "../../styles/variables" as vars;
+@use "../../styles/mixins";
+@import "icon.css";
+@import "navbar680px.css";
 
 $navbarItemTextColor : darkgray;
 

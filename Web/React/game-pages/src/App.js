@@ -7,7 +7,7 @@ import HackAndSlash from "./components/game_genres/hack_and_slash/HackAndSlash";
 import ContactForm from "./components/contact_form/ContactForm";
 import Login from "./components/login/Login";
 import HomePage from "./components/home/HomePage";
-import ResponsiveNavbar from "./components/navbar/navbar/ResponsiveNavbar";
+import ResponsiveNavbar from "./components/navbar/ResponsiveNavbar";
 import MainPage from "./components/main/MainPage";
 
 const App = () => {
