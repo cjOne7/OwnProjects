@@ -1,0 +1,47 @@
+@use "variables" as vars;
+
+.btn-container {
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  height          : 15%;
+}
+
+.btn-link {
+  position        : relative;
+  display         : inline-block;
+  padding         : vars.$indent * 1.5 vars.$indent * 4.5;
+  margin          : vars.$indent * 2.5 0;
+  color           : white;
+  text-decoration : none;
+  text-transform  : uppercase;
+  font-size       : vars.$indent * 2;
+  letter-spacing  : 2px;
+  border-radius   : 40px;
+  overflow        : hidden;
+  background      : linear-gradient(90deg, #0162c8, #59d2e2);
+  border          : none;
+  cursor          : pointer;
+
+  span {
+	position       : absolute;
+	background     : white;
+	transform      : translate(-50%, -50%);
+	pointer-events : none;
+	border-radius  : 50%;
+	animation      : animate .5s linear infinite;
+  }
+}
+
+@keyframes animate {
+  0% {
+	width   : 0;
+	height  : 0;
+	opacity : .5;
+  }
+  100% {
+	width   : 500px;
+	height  : 500px;
+	opacity : 0;
+  }
+}

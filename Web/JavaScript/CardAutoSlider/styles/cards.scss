@@ -1,0 +1,76 @@
+@use "variables" as vars;
+
+.container {
+  background-color : vars.$bgColor;
+  height           : 100vh;
+  width            : 100vw;
+  max-width        : 100%;
+  padding          : vars.$indent * 4.5 vars.$indent * 1.5 0;
+}
+
+.cards-container {
+  height          : 85vh;
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  //padding         : vars.$indent * 4.5 vars.$indent * 1.5 0;
+
+  .cards-box {
+	width          : 100%;
+	display        : flex;
+	flex-direction : row;
+	padding        : 0 vars.$indent * 3;
+
+	.slide {
+	  height              : 80vh;
+	  border-radius       : 20px;
+	  margin              : vars.$indent * 2.5 vars.$indent * 1.5;
+	  cursor              : pointer;
+	  color               : white;
+	  flex-grow           : 1;
+	  background-size     : cover;
+	  background-position : center;
+	  background-repeat   : no-repeat;
+	  position            : relative;
+	  transition          : all 1.5s ease-in-out;
+
+	  h3 {
+		position  : absolute;
+		font-size : vars.$indent * 3;
+		bottom    : vars.$indent * 2.5;
+		left      : vars.$indent * 2.5;
+		margin    : 0;
+		opacity   : 0;
+	  }
+
+	  &.active {
+		flex-grow : 10;
+
+		h3 {
+		  opacity    : 1;
+		  transition : opacity .3s ease-in 1s;
+		}
+	  }
+	}
+  }
+}
+
+@media screen and (max-width : 1020px) {
+  .cards-container {
+	.cards-box {
+	  flex-direction  : column;
+	  justify-content : center;
+	  align-items     : center;
+
+	  .slide {
+		height : 100px;
+		width  : 80vw;
+		margin : vars.$indent * 1.5 vars.$indent * 1.5;
+
+		&.active {
+		  height : 20rem;
+		}
+	  }
+	}
+  }
+}
