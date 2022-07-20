@@ -9,6 +9,5 @@ button.addEventListener('click', function (e) {
 
     setTimeout(() => {
         this.removeChild(ripples)
-        clearInterval(switchCardsInterval)
     }, 500)
 })

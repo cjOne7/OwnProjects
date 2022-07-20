@@ -4,14 +4,11 @@
   display         : flex;
   justify-content : center;
   align-items     : center;
-  height          : 10vh;
+  height          : 15vh;
 }
 
 .btn-link {
   position        : relative;
-  display         : inline-block;
-  padding         : vars.$indent * 1.5 vars.$indent * 4.5;
-  margin          : vars.$indent * 2.5 0;
   color           : white;
   text-decoration : none;
   text-transform  : uppercase;
@@ -22,6 +19,12 @@
   background      : linear-gradient(90deg, #0162c8, #59d2e2);
   border          : none;
   cursor          : pointer;
+  width           : 30vw;
+  min-width       : 250px;
+  max-width       : 600px;
+  max-height      : 50px;
+  padding         : 2vh 1vw;
+  text-align      : center;
 
   span {
 	position       : absolute;

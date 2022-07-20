@@ -4,7 +4,6 @@ let index = 0
 const beforeStartDelay = 1000
 const removeClassInterval = 4000
 const switchCardInterval = 6000
-let switchCardsInterval;
 const clearActiveClasses = () => slides.forEach(slide => slide.classList.remove(classActive));
 
 function cardsSwitching() {
@@ -23,12 +22,8 @@ function cardsSwitching() {
 
 const getIndexOfClickedCard = slide => Array.from(slides).findIndex(curSlide => curSlide === slide);
 
-const openCardsInterval = () => {
-    switchCardsInterval = setInterval(cardsSwitching, switchCardInterval)
-    openCardsByClick();
-};
-
 function openCardsByClick() {
+    let switchCardsInterval = setInterval(cardsSwitching, switchCardInterval);
     for (const slide of slides) {
         slide.addEventListener('click', () => {
             index = getIndexOfClickedCard(slide)
@@ -57,7 +52,7 @@ const deactivateFirstCard = () => setTimeout(() => slides[index++].classList.rem
 activateFirstCard()
     .then(() => {
         deactivateFirstCard()
-        openCardsInterval()
+        openCardsByClick()
     })
 
 //----------------------------------------------------------------------------------------------------------------------
