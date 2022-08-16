@@ -25,7 +25,8 @@ const TodoItem: React.FC<TodoItemProps> = ({todo, checkTodo, removeTodo}) => {
                        onChange={() => checkTodo(todo.id)}
                 />
                 <span>{todo.title}</span>
-                <FontAwesomeIcon icon={faTrash} className={'icon'}/>
+                <FontAwesomeIcon icon={faTrash} className={'icon'}
+                                 onClick={(e: React.MouseEvent) => removeTodo(todo.id, e)}/>
             </label>
         </li>
     );
