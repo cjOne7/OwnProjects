@@ -1,13 +1,14 @@
 @use "../../styles/variables" as vars;
 @use "../../styles/mixins";
-@import "icon.css";
-@import "navbar680px.css";
+@import "icon.scss";
+@import "navbar680px.scss";
 
 $navbarItemTextColor : darkgray;
 
 .navbar-container {
   background-color : vars.$bgNavBarColor;
   min-height       : 3rem;
+  transition       : height 1s ease-in-out;
 
   .navbar-list-items {
 	width      : 80%;

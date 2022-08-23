@@ -8,18 +8,16 @@ import NavbarMenuIcon from "./NavbarMenuIcon";
 const ResponsiveNavbar = () => {
     const navbarBodyId = 'navbar-ul';
     return (
-        <div>
-            <nav role={"navigation"} className={'navbar-container'}>
-                <ul className={'navbar-list-items'} id={navbarBodyId}>
-                    <NavbarHeader/>
-                    <NavbarItem linkText={'MMORPG'} path={routes.mmorpg}/>
-                    <NavbarItem linkText={'Shooters'} path={routes.shooters}/>
-                    <NavbarItem linkText={'Hack&Slash'} path={routes.hack_and_slash}/>
-                    <NavbarItem linkText={'Contact us'} path={routes.contact_form}/>
-                    <NavbarMenuIcon navbarBodyId={navbarBodyId}/>
-                </ul>
-            </nav>
-        </div>
+        <nav role={"navigation"} className={'navbar-container'}>
+            <ul className={'navbar-list-items'} id={navbarBodyId}>
+                <NavbarHeader/>
+                <NavbarItem linkText={'MMORPG'} path={routes.mmorpg}/>
+                <NavbarItem linkText={'Shooters'} path={routes.shooters}/>
+                <NavbarItem linkText={'Hack&Slash'} path={routes.hack_and_slash}/>
+                <NavbarItem linkText={'Contact us'} path={routes.contact_form}/>
+                <NavbarMenuIcon navbarBodyId={navbarBodyId}/>
+            </ul>
+        </nav>
     );
 };
 
